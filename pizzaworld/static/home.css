@@ -1,0 +1,5 @@
+.carousel-inner>.item {
+    -webkit-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition: 0s !important;
+}

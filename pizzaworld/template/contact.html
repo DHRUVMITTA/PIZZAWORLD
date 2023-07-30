@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us | PIZZA WORLD {% endblock title %}
+{% block body %}
+<form method="post" action="/contact/">  <!-- /aage piche/-->
+ {% csrf_token %}
+    <div class="container my-4 px-5">
+    <div class="form-group ">
+        <label for="exampleFormControlInput1">Your Name</label>
+        <input type="text" name='username'class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name" required>
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" name='email' class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Mobile Number</label>
+        <input type="text" name='phone' maxlength=10 class="form-control" id="exampleFormControlInput1" placeholder="Enter your Mobile Number" required>
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+  {% endblock body %}

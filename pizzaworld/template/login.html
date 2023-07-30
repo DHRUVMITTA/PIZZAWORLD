@@ -1,0 +1,46 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/login.css/'%}">
+    <title>Log In | platemate.com</title>
+<style>
+</style>
+</head>
+<body>
+    <body onabort="inlit()">
+        <main class="game">
+        <div class="welcomescreen">
+        <h2>LOG IN</h2>
+       
+       <!-- <img class="image" src="{% static "logo.png" %}"alt="play the game"> -->
+       <section class="button-wrapper">
+       <h3>{{message}}</h3>
+       
+        <form id="msform" action="/login/" method="post">
+        {% csrf_token %}
+        <fieldset>  
+         
+             
+           
+            <input type="text" name="username" required placeholder="enter your name" /> 
+            
+            <input type="password" name="password" required placeholder="Password" />  
+              
+            <input type="submit" name="next" class="next action-button" value="Log In" />  
+           </fieldset>  
+           
+         
+    </form>
+
+
+  
+        
+    </main>
+
+    
+</body>
+</html>
